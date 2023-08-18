@@ -3,6 +3,7 @@
     "description": "Ready to use package for authentication in Velsym framework.",
     "type": "library",
     "require": {
+        "php": "^8.2",
         "velsym/universal-pack": "dev-main"
     },
     "license": "MIT",
