@@ -1,0 +1,20 @@
+{
+    "name": "velsym/auth",
+    "description": "Ready to use package for authentication in Velsym framework.",
+    "type": "library",
+    "require": {
+        "velsym/universal-pack": "dev-main"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Velsym\\Auth\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Xawier Slupik",
+            "email": "48760619+xBlixon@users.noreply.github.com"
+        }
+    ]
+}
