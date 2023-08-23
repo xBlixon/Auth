@@ -23,6 +23,8 @@ class AuthCanAccess extends BaseMiddleware
     {
         $user = AuthStatus::getUser();
         if(
+            is_null($user)
+            ||
             !AuthStatus::isLoggedIn()
             ||
             self::$roles[$this->role] > self::$roles[$user->getRole()]
