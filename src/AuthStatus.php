@@ -12,13 +12,13 @@ class AuthStatus
 
     public static function isLoggedIn(): bool
     {
-        /** @var User|NULL $user */
+        /** @var BaseUser|NULL $user */
         $user = self::getUser();
         if(!$user) return false;
         return DatabaseManager::isPresentInDatabase($user);
     }
 
-    public static function logIn(User $user): void
+    public static function logIn(BaseUser $user): void
     {
         Session::getInstance()->set('auth', $user);
     }
@@ -28,7 +28,7 @@ class AuthStatus
         Session::getInstance()->purge('auth');
     }
 
-    public static function getUser(): User|NULL
+    public static function getUser(): BaseUser|NULL
     {
         return Session::getInstance()->get('auth');
     }

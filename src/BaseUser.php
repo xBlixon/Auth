@@ -4,7 +4,7 @@ namespace Velsym\Auth;
 
 use Velsym\Database\BaseModel;
 
-abstract class User extends BaseModel
+abstract class BaseUser extends BaseModel
 {
     const TABLE_NAME = "user";
 
